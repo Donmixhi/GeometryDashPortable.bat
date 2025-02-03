@@ -1,0 +1,31 @@
+REM AJUSTES PRINCIPALES
+@echo off
+TITLE Geometry Dash...
+COLOR A
+cls 
+
+
+set "DIRECTORIO=GD.bat"
+for %%u in (A B C D E F G H I J K L M N O P Q R S T U V W X Y Z) do (
+    if exist "%%u:\%DIRECTORIO%" (
+        set "UNIDAD=%%u"
+        goto :FIN
+    )
+)
+:FIN
+ECHO %UNIDAD%:
+PAUSE 
+cd /d %UNIDAD%:\GDP
+
+MKDIR BACKUPS\
+mkdir BACKUPS\GeometryDash
+mkdir BACKUPS\SONGS
+mkdir BACKUPS\LOGS
+CLS 
+ECHO HOLA 
+ECHO HI
+ECHO LEE EL README PARA COMPRENDER COMO FUNCIONA
+ECHO READ THE RADME TO UNDERSTAND HOW IT WORKS
+PAUSE 
+START "" "GD.bat"
+EXIT 
